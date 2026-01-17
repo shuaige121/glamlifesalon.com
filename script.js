@@ -1,51 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Mobile Menu Toggle
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileBtn.addEventListener('click', () => {
-        mobileBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileBtn.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
-    });
-
     // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
 
-    const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 150;
-
-        revealElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-
-            if (elementTop < windowHeight - elementVisible) {
-                element.classList.add('active');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Only animate once
             }
         });
-    };
+    }, {
+        root: null,
+        threshold: 0.15, // Trigger when 15% of element is visible
+        rootMargin: "0px"
+    });
 
-    window.addEventListener('scroll', revealOnScroll);
-    // Trigger once on load
-    revealOnScroll();
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
 
-    // Sticky Navbar transparency effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-        } else {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-        }
+    // Optional: Add smooth scrolling for legacy browsers if needed 
+    // (CSS scroll-behavior: smooth handles most modern cases)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });

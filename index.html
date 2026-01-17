@@ -4,127 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam Life Salon | 奢华美发体验</title>
-    <meta name="description" content="Glam Life Salon - 提供巴黎画染、高层次烫发等高端美发服务。">
+    <title>Glam Life Salon</title>
+    <meta name="description" content="Glam Life Salon - Singapore's Premier Hair Salon.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&family=Outfit:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="logo.jpg" alt="Glam Life Salon Logo">
-            </a>
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#hero">首页</a></li>
-                <li><a href="#services">服务项目</a></li>
-                <li><a href="#gallery">作品展示</a></li>
-                <li><a href="#contact">联系我们</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <header id="hero" class="hero">
-        <div class="hero-bg">
-            <img src="aa6353a30e8b1344340e6b5afbce2d1a.jpg" alt="Glamorous Hair Style">
+    <header class="hero">
+        <div class="hero-content">
+            <div class="logo-container fade-in">
+                <img src="new_logo.png" alt="Glam Life Salon" class="main-logo">
+            </div>
+
+            <div class="hero-actions fade-in delay-1">
+                <a href="https://www.google.com/maps/search/?api=1&query=Glam+Life+Salon+9+Craig+Rd" target="_blank"
+                    class="btn btn-outline">
+                    <i class="fa-solid fa-location-dot"></i> 导航地址
+                </a>
+                <a href="https://wa.me/6596400012" target="_blank" class="btn btn-solid">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp 预约
+                </a>
+            </div>
         </div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="fade-in-up">重塑您的美丽</h1>
-            <p class="fade-in-up delay-1">体验顶级的巴黎画染与高层次烫发艺术</p>
-            <a href="#contact" class="btn btn-primary fade-in-up delay-2">立即预约</a>
+        <div class="scroll-indicator fade-in delay-2">
+            <span>探索更多</span>
+            <i class="fa-solid fa-chevron-down"></i>
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
+    <!-- Intro Section -->
+    <section class="intro section-padding">
+        <div class="container text-center">
+            <h2 class="section-title reveal">奢华体验 · 独特风格</h2>
+            <p class="section-desc reveal">
+                Glam Life Salon 致力于为您打造专属的自信与美丽。<br>
+                在舒适优雅的环境中，享受顶级的发型设计服务。
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Horizontal Scroll) -->
+    <section class="portfolio section-padding-bottom">
         <div class="container">
-            <h2 class="section-title text-center">专属服务</h2>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card reveal">
-                    <div class="service-image">
-                        <img src="巴黎画染.jpg" alt="巴黎画染">
-                    </div>
-                    <div class="service-info">
-                        <h3>巴黎画染</h3>
-                        <p>Balayage</p>
-                        <p class="service-desc">法式自然渐变，打造随性高级的混血感发色，低维护高质感。</p>
-                    </div>
+            <h2 class="section-title text-center reveal">作品展示</h2>
+        </div>
+        <div class="portfolio-scroller hide-scrollbar reveal">
+            <!-- Gallery Items -->
+            <div class="portfolio-item">
+                <img src="gallery_1.png" alt="Hairstyle 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="gallery_2.png" alt="Hairstyle 2">
+            </div>
+            <div class="portfolio-item">
+                <img src="gallery_3.png" alt="Hairstyle 3">
+            </div>
+            <div class="portfolio-item">
+                <img src="real_1.jpg" alt="Real Customer 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="real_2.jpg" alt="Real Customer 2">
+            </div>
+            <div class="portfolio-item">
+                <img src="real_3.jpg" alt="Real Customer 3">
+            </div>
+            <div class="portfolio-item">
+                <img src="real_4.jpg" alt="Real Customer 4">
+            </div>
+            <div class="portfolio-item">
+                <img src="real_5.jpg" alt="Real Customer 5">
+            </div>
+        </div>
+    </section>
+
+    <!-- Address & Contact Section -->
+    <section class="address section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center reveal">我们的位置</h2>
+
+            <div class="address-card reveal">
+                <div class="address-info">
+                    <h3>Glam Life Salon</h3>
+                    <p><i class="fa-solid fa-map-pin"></i> 9 Craig Rd #03-01 <br>Singapore 089669</p>
+                    <p><i class="fa-regular fa-clock"></i> 每天 10:00 - 22:00</p>
+                    <a href="https://wa.me/6596400012" class="contact-link"><i class="fa-solid fa-phone"></i> +65 9640
+                        0012</a>
                 </div>
-                <!-- Service 2 -->
-                <div class="service-card reveal delay-1">
-                    <div class="service-image">
-                        <img src="高层次烫发.jpg" alt="高层次烫发">
-                    </div>
-                    <div class="service-info">
-                        <h3>高层次烫发</h3>
-                        <p>High Layer Perm</p>
-                        <p class="service-desc">灵动轻盈的卷度，修饰脸型，营造蓬松饱满的氛围感。</p>
-                    </div>
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8198!2d103.8402!3d1.2776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da197fbbe5b743%3A0xa9246aab8a6c4b75!2sGlamlife%20Salon!5e0!3m2!1sen!2ssg!4v1704877200000"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title text-center text-white">风格精选</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item reveal"><img src="371341ce3fefb26b8cb51c1e336c6895.jpg" alt="Style Showcase 1">
-                </div>
-                <div class="gallery-item reveal delay-1"><img src="8cd944b667ca7aa99c51aaf5dda7de6c.jpg"
-                        alt="Style Showcase 2"></div>
-                <div class="gallery-item reveal delay-2"><img src="d7244302a097cf3a04ac6d5e0da880a3.jpg"
-                        alt="Style Showcase 3"></div>
-            </div>
-        </div>
+    <!-- Footer CTA -->
+    <section class="footer-cta section-padding text-center">
+        <h2 class="reveal">准备好改变了吗？</h2>
+        <a href="https://wa.me/6596400012" target="_blank" class="btn btn-whatsapp-large reveal">
+            <i class="fa-brands fa-whatsapp"></i> 联系我们 Booking Now
+        </a>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container contact-container">
-            <div class="contact-info reveal">
-                <h2 class="section-title">预约咨询</h2>
-                <p>准备好焕然一新了吗？请通过以下方式联系我们。</p>
-                <ul class="contact-details">
-                    <li><strong>地址:</strong> 9 Craig Rd #03-01 S089669, Singapore</li>
-                    <li><strong>WhatsApp:</strong> <a href="https://wa.me/6596400012">+65 9640 0012</a></li>
-                    <li><strong>营业时间:</strong> 周一至周日 10:00 - 22:00</li>
-                </ul>
-                <div class="social-links">
-                    <a href="https://wa.me/6596400012" class="social-icon btn-whatsapp">📱 WhatsApp 预约</a>
-                </div>
-            </div>
-            <div class="contact-map reveal delay-1">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8198!2d103.8402!3d1.2776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da197fbbe5b743%3A0xa9246aab8a6c4b75!2sGlamlife%20Salon!5e0!3m2!1sen!2ssg!4v1704877200000"
-                    width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Glam Life Salon. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Glam Life Salon. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
