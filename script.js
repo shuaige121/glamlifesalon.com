@@ -34,4 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // WeChat Copy Functionality
+    const wechatBtn = document.getElementById('wechat-copy-btn');
+    if (wechatBtn) {
+        wechatBtn.addEventListener('click', () => {
+            const wechatId = 'Lmch96400012';
+            navigator.clipboard.writeText(wechatId).then(() => {
+                const originalHTML = wechatBtn.innerHTML;
+                wechatBtn.innerHTML = '<i class="fa-solid fa-check"></i> 已复制!';
+
+                // Optional: Change style temporarily
+                wechatBtn.style.backgroundColor = '#07C160';
+                wechatBtn.style.color = '#fff';
+
+                setTimeout(() => {
+                    wechatBtn.innerHTML = originalHTML;
+                    wechatBtn.style.backgroundColor = ''; // Revert to original (or CSS defined)
+                    wechatBtn.style.color = '#07C160'; // Revert to text color
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('复制失败，请手动复制: ' + wechatId);
+            });
+        });
+    }
 });

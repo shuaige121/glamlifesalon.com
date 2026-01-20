@@ -31,12 +31,15 @@
 
             <div class="hero-actions fade-in delay-1">
                 <a href="https://www.google.com/maps/search/?api=1&query=Glam+Life+Salon+9+Craig+Rd" target="_blank"
-                    class="btn btn-outline">
+                    rel="noopener noreferrer" class="btn btn-outline">
                     <i class="fa-solid fa-location-dot"></i> 导航地址
                 </a>
-                <a href="https://wa.me/6596400012" target="_blank" class="btn btn-solid">
+                <a href="https://wa.me/6596400012" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
                     <i class="fa-brands fa-whatsapp"></i> WhatsApp 预约
                 </a>
+                <button id="wechat-copy-btn" class="btn btn-outline btn-wechat">
+                    <i class="fa-brands fa-weixin"></i> 微信: Lmch96400012 (点击复制)
+                </button>
             </div>
         </div>
         <div class="scroll-indicator fade-in delay-2">
@@ -63,15 +66,6 @@
         </div>
         <div class="portfolio-scroller hide-scrollbar reveal">
             <!-- Gallery Items -->
-            <div class="portfolio-item">
-                <img src="gallery_1.png" alt="Hairstyle 1">
-            </div>
-            <div class="portfolio-item">
-                <img src="gallery_2.png" alt="Hairstyle 2">
-            </div>
-            <div class="portfolio-item">
-                <img src="gallery_3.png" alt="Hairstyle 3">
-            </div>
             <div class="portfolio-item">
                 <img src="real_1.jpg" alt="Real Customer 1">
             </div>
@@ -104,9 +98,9 @@
                         0012</a>
                 </div>
                 <div class="map-embed">
-                    <iframe
+                    <iframe title="Glam Life Salon Location Map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8198!2d103.8402!3d1.2776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da197fbbe5b743%3A0xa9246aab8a6c4b75!2sGlamlife%20Salon!5e0!3m2!1sen!2ssg!4v1704877200000"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="100%" height="300" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -117,7 +111,8 @@
     <!-- Footer CTA -->
     <section class="footer-cta section-padding text-center">
         <h2 class="reveal">准备好改变了吗？</h2>
-        <a href="https://wa.me/6596400012" target="_blank" class="btn btn-whatsapp-large reveal">
+        <a href="https://wa.me/6596400012" target="_blank" rel="noopener noreferrer"
+            class="btn btn-whatsapp-large reveal">
             <i class="fa-brands fa-whatsapp"></i> 联系我们 Booking Now
         </a>
     </section>

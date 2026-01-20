@@ -119,6 +119,16 @@ ul {
     color: var(--white);
 }
 
+.btn-wechat {
+    border-color: #07C160;
+    color: #07C160;
+}
+
+.btn-wechat:hover {
+    background-color: #07C160;
+    color: white;
+}
+
 .btn-whatsapp-large {
     background: #25D366;
     color: white;
@@ -320,6 +330,7 @@ ul {
 .map-embed iframe {
     border-radius: 8px;
     height: 300px;
+    border: 0;
 }
 
 @media (min-width: 900px) {
